@@ -18,7 +18,8 @@ app.use(json());
 app.use(
   cookieSession({
     signed: false, // disable encryption, JWT is encrypted and better cross lang support
-    secure: process.env.NODE_ENV !== "test", // only use cookies over HTTPS
+    // secure: process.env.NODE_ENV !== "test", // only use cookies over HTTPS
+    secure: false,
   })
 );
 
